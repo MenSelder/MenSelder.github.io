@@ -17,15 +17,15 @@
         <div id="menu">
             <!-- <button onclick="hideSettings()">hide</button> -->
             <button onclick="location.reload()">restart</button>
-            <button onclick="kinoko()">kinoko</button>
-            <button id="donation" onclick="hehMoney()">donation?</button>
-            <button id="donationNo" onclick="noNo()">NO</button>          
-            <button id="donationYes" onclick="donation()">YES</button>   
+            <button onclick="kinoko(); this.blur()">kinoko</button>
+            <button id="donation" onclick="hehMoney(); this.blur()">donation?</button>
+            <button id="donationNo" onclick="noNo(); this.blur()">NO</button>          
+            <button id="donationYes" onclick="donation(); this.blur()">YES</button>   
         </div>
         <div id="control">
-            <button id="left" onclick="moveLeft()">left</button>
-            <button id="right" onclick="moveRight()">right</button>
-            <button id="am" onclick="ammMulti()">am</button>
+            <button id="left" onclick="moveLeft(); this.blur()">left</button>
+            <button id="right" onclick="moveRight(); this.blur()">right</button>
+            <button id="am" onclick="ammMulti(); this.blur()">am</button>
 
             <!-- <button id="left" ontouchstart="ammMulti">left</button>
             <button id="right">right</button>

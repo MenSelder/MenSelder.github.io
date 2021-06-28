@@ -275,38 +275,56 @@ function moveRight(){
 //-----------------
 
 //для клавиатуры
+// function eventSwitch(event){
+//     switch(event.key){
+//         case "A":
+//             guraOffsetX-=guraSpeed;
+//             break;
+//         case "a":
+//             guraOffsetX-=guraSpeed;
+//             break;
+//         case "ф": //русские ВПЕРЕД
+//             guraOffsetX-=guraSpeed;
+//             break;
+//         case "Ф":
+//             guraOffsetX-=guraSpeed;
+//             break;
+//         case "D":
+//             guraOffsetX+=guraSpeed;
+//             break;
+//         case "d":
+//             guraOffsetX+=guraSpeed;
+//             break;
+//         case "в":
+//             guraOffsetX+=guraSpeed;
+//             break;
+//         case "В":
+//             guraOffsetX+=guraSpeed;
+//             break;
+//         case " ":
+//             //jump
+//             break;
+//         default:
+//             ammMulti();
+//             break;
+//     }
+// }
+
 function eventSwitch(event){
-    switch(event.key){
-        case "A":
-            guraOffsetX-=guraSpeed;
-            break;
-        case "a":
-            guraOffsetX-=guraSpeed;
-            break;
-        case "ф": //русские ВПЕРЕД
-            guraOffsetX-=guraSpeed;
-            break;
-        case "Ф":
-            guraOffsetX-=guraSpeed;
-            break;
-        case "D":
-            guraOffsetX+=guraSpeed;
-            break;
-        case "d":
-            guraOffsetX+=guraSpeed;
-            break;
-        case "в":
-            guraOffsetX+=guraSpeed;
-            break;
-        case "В":
-            guraOffsetX+=guraSpeed;
-            break;
-        case " ":
-            //jump
-            break;
-        default:
-            ammMulti();
-            break;
+    //console.log("event: ", event, event.keyCode);
+    switch(event.keyCode){
+    case 65:{ //left
+        moveLeft();
+        break;
+    }
+    case 68:{
+        moveRight()
+        break;
+    }
+    default:{
+        ammMulti();
+        break;
+    }
     }
 }
 
