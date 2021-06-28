@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+    text-decoration: none;
+    outline: none;
+}
+canvas {
+    background:lightblue; 
+    display: block; 
+    margin: 0 auto;
+    z-index: 10;
+}
+#score {
+    position: fixed;
+    top: 0vh;
+    left: 8vw;
+    /* font-size: 180px; */
+}
+#health {
+    position: fixed;
+    top: 0vh;
+    left: 1vw;
+}
+body{               
+    overflow: hidden;
+    background: lightcyan;
+
+}
+#menu{
+    position: relative;
+    text-align: center;
+}
+#control{
+    position: absolute;  
+    margin: 0; 
+    z-index: 11;
+}
+#contol button{    
+    background: transparent;
+    border: none;
+    font-size: 0;
+    display: block;
+    cursor: pointer;
+}
+#left{
+    top: 0;
+    left: 0;
+    height: 50vh;
+    width: 50vw;   
+
+    background: transparent;
+    border: none;
+    font-size: 0;
+    
+    /* display: block;
+    cursor: pointer; */
+}
+#right{
+    right: 0;
+    top: 0;
+    height: 50vh;
+    width: 49vw;
+    
+    background: transparent;
+    border: none;
+    font-size: 0;
+}
+#am{
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    top: 50vh;
+    height: 50vh;
+    
+    background: transparent;
+    border: none;
+    font-size: 0;
+}

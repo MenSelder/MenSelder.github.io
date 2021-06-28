@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximym-scale=1.0, minimum-sacle=1.0, user-scalable=no, minimal-ui">
+        <meta name="full-screen" content="yes">
+        <meta charset="urf-8">
+        <script src="app.js"></script>
+        <script src="kinoko.js"></script>
+        <!-- <script src="menu.js"></script> -->
+        <link rel="stylesheet" href="app.css" type="text/css">
+    </head>
+    <body>
+    
+        <div id="menu"> 
+            <!-- <canvas id="meunCanvas"></canvas> -->
+            <h1 id = "title">Doggo2</h1>
+            <br>
+            <button onclick="new_game()">NEW</button>
+            <button id="cnt" onclick="ctnChk()">Continue</button>
+            <button>Ekum</button>
+            <button onclick="newKinokoGame()">Kiniko</button>
+        </div>
+
+        <div id="game">
+            <canvas id="canvas"></canvas>
+            <div id="hp">3</div>
+            <div id="score">0</div>
+
+            <div id="control">
+                <!-- <button id="one" onclick="one()">1</button> -->
+                <!-- <button id="two" onclick="two()">2</button> -->
+                <!-- <button id="one" onclick="set('one')">1</button> -->
+                <button onclick="pauseBtn()">pause</button>
+                <!-- <button id="two" onclick="set('two')">2</button> -->
+                <button class="upper" onclick="jmerikDog()">jmerik<br>press<br>AnyKey</button>
+                <button class="upper" onclick="attackDog()">attackDog<br>press<br>Enter</button>
+                <button class="upper" onclick="jumpDog()">jumpDog<br>press<br>Space</button>
+                
+            </div>
+        </div>
+
+        <script type="text/javascript" charset="utf-8">
+            // initMenu();
+            // document.getElementById('menu').hidden = true;
+            init();
+            // new_game();
+        </script>
+        
+    </body>
+</html>

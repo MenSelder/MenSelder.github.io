@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>SHAAARK</title>
+        <link rel="stylesheet" href="gura.css" type="text/css">
+        <script>
+            // переворот экрана на java
+            // this.rotate() = function{
+            //     this.run('rotate');
+            // };
+        </script>
+    </head>
+    <body>
+        <div id="health"></div>
+        <div id="score"><h1></h1></div> 
+        <div id="menu">
+            <!-- <button onclick="hideSettings()">hide</button> -->
+            <button onclick="location.reload()">restart</button>
+            <button onclick="kinoko()">kinoko</button>
+            <button id="donation" onclick="hehMoney()">donation?</button>
+            <button id="donationNo" onclick="noNo()">NO</button>          
+            <button id="donationYes" onclick="donation()">YES</button>   
+        </div>
+        <div id="control">
+            <button id="left" onclick="moveLeft()">left</button>
+            <button id="right" onclick="moveRight()">right</button>
+            <button id="am" onclick="ammMulti()">am</button>
+
+            <!-- <button id="left" ontouchstart="ammMulti">left</button>
+            <button id="right">right</button>
+            <button id="am">am</button> -->
+
+        </div>
+
+        <canvas id="myCanvas"></canvas>
+
+        <script src="gura.js"></script>
+        <script>    
+            $('donation').hidden = true;
+            $('donationNo').hidden = true;
+            $('donationYes').hidden = true;
+        </script> 
+        
+    </body>
+</html>
