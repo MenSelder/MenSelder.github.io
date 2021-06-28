@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+    text-decoration: none;
+    outline: none;
+}
+canvas {
+    left: 0%;
+    background:lightblue; 
+    display: block; 
+    margin: 0 auto;
+    z-index: 10;
+}
+#canvas1 {
+    left: 0%;
+    background:lightblue; 
+    display: block; 
+    margin: 0 auto;
+    z-index: 10;
+}
+#canvas2 {
+    right: 0%;
+    background:rgb(173, 204, 230); 
+    display: block; 
+    margin: 0 auto;
+    z-index: 10;
+}
