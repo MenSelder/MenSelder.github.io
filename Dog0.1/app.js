@@ -709,7 +709,7 @@ function engine() {
                             break;
                         }
             }
-            b.position[0] += 0.05 * 5 * delta;
+            b.position[0] += 0.05 * 10 * delta;
             b.draw();
         }
 
