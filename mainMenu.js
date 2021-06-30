@@ -18,6 +18,12 @@ backVec = [imgBackKorone, imgBackKorone]
 //let backDef = 0; //номер актуального фона
 let who = false; //false = gura / true = koro
 
+//1920 x 937
+let imgScaleX = windowW / 1920
+let imgScaleY = windowH / 937
+let imgScale = Math.min(imgScaleX, imgScaleY)
+
+
 //backVecKoro = [];
 let backSpeed = 2;
 let backCnt = 0; //
@@ -109,16 +115,16 @@ function drawGura(){
     drawBackground();
     ctx.drawImage(backVec[0], windowW / 2, 0, gameW , gameH); //
     //gura 940 x 1222
-    ctx.drawImage(persons[5], 0, 0, 800, 894);
-    ctx.drawImage(persons[6], windowW - 420, windowH - 480, 480, 480); //koro
+    ctx.drawImage(persons[5], 0, 0, 800 * imgScale, 894 * imgScale);
+    ctx.drawImage(persons[6], windowW - 420 * imgScale, windowH - 480 * imgScale, 480 * imgScale, 480 * imgScale); //koro
 }
 
 function drawKorone(){
     darwBackground();
     ctx.drawImage (imgBackGura, -(windowW / 2) - (sclX(86)), 0, windowW + (sclX(86)), sclY(320));
     //koro 683 x 1206 ()
-    ctx.drawImage(persons[2], windowW * 1.16 / 2, 0, 683, 1206);
-    ctx.drawImage(persons[0], 0, windowH - 940 / 2, 940 / 2, 1222 / 2); //gura
+    ctx.drawImage(persons[2], windowW * 1.16 / 2, 0, 683 * imgScale, 1206 * imgScale);
+    ctx.drawImage(persons[0], 0, windowH - 940 / 2 * imgScale, 940 / 2 * imgScale, 1222 / 2 * imgScale); //gura
 
 }
 
