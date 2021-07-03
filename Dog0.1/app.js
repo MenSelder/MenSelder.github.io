@@ -3,6 +3,9 @@ let $ = function (id) {
 }
 
 // $('title').innerHTML = "line0";
+onload = function(){
+    $("loadScr").hidden = true;
+}
 
 var paused = false;
 

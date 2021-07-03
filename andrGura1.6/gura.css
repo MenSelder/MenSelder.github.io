@@ -5,6 +5,14 @@
     text-decoration: none;
     outline: none;
 }
+#loadScr{
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-image: url(MenSelder.github.io/koroneLoadOld.png);
+    background-size: cover;
+}
 canvas {
     background:lightblue; 
     display: block; 

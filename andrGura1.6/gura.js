@@ -1,6 +1,9 @@
 let $ = function(id){
     return document.getElementById(id);
 }
+onload = function(){
+    $("loadScr").hidden = true;
+}
 
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
