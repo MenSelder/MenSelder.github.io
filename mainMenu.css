@@ -5,6 +5,14 @@
     text-decoration: none;
     outline: none;
 }
+#loadScr{
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-image: url(./koroneLoadOld.png);
+    background-size: cover;
+}
 canvas {
     left: 0%;
     background:lightblue; 

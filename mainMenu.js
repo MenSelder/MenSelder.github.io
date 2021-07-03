@@ -2,6 +2,10 @@ let $ = function (id) {
     return document.getElementById(id);
 }
 //let canvas1, ctx1, canvas2, ctx2;
+onload = function(){
+    $("loadScr").hidden = true;
+}
+
 let canvas, ctx;
 
 let windowH = window.innerHeight;
