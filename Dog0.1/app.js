@@ -2,9 +2,11 @@ let $ = function (id) {
     return document.getElementById(id);
 }
 
-// $('title').innerHTML = "line0";
+//$('menu').hidden = true; //
+
 onload = function(){
     $("loadScr").hidden = true;
+   // $('menu').hidden = false; //
 }
 
 var paused = false;
@@ -113,7 +115,8 @@ function new_game() {
     health = 3;
     jimxFreq = 3000;
     yDogPos = gameH07;
-    liveTime = 0; //время игры
+    liveTime = 0; //время игры (score)
+    spawnTime = 0; //frames cnter
 
     backDef = 0; //номер актуального фона
     backVec = [godBack[0], godBack[0], godBack[0]];
@@ -131,6 +134,8 @@ function new_game() {
     //--
     engine();
     hide_menu();
+
+    rects.push(new Rect());
 }
 
 //continue
@@ -580,17 +585,17 @@ function drawDog() {
     //---------- Физицеский 
     if (isJumpDog){ 
         timeJump++;
-        if(yDogPos > minHihgt){ //счетчик высоты
-            minHihgt = yDogPos;
-        }
-        console.log("jumping{H, max, min, curr,del, time:}", [H, maxHihgt, minHihgt, yDogPos, minHihgt-maxHihgt, jumpDogTime], [gravity, jumpDogSpeed]);
+        // if(yDogPos > minHihgt){ //счетчик высоты
+        //     minHihgt = yDogPos;
+        // }
+        // console.log("jumping{H, max, min, curr,del, time:}", [H, maxHihgt, minHihgt, yDogPos, minHihgt-maxHihgt, jumpDogTime], [gravity, jumpDogSpeed]);
         //--
         gravity = 0.1 * jumpCoef; // g
         yDogPos -= jumpDogSpeed - gravity * jumpDogTime;
         //-
-        if (maxHihgt > yDogPos){ //счетчик высоты
-            maxHihgt = yDogPos;
-        }
+        // if (maxHihgt > yDogPos){ //счетчик высоты
+        //     maxHihgt = yDogPos;
+        // }
         //-
         jumpDogTime++;
         if(yDogPos >= gameH07){
@@ -624,15 +629,19 @@ function drawDog() {
 
     // cntDog++;
 }
-let timeJump = 0;
-let maxHihgt = H; //измерение высоты
-let minHihgt = 0; //измерение высоты 
+// let timeJump = 0;
+// let maxHihgt = H; //измерение высоты
+// let minHihgt = 0; //измерение высоты 
 
 
 
 // счетчик кадров
 // let liveTime = 0;
 let gameSpeed;
+
+let spawnTime = 0;
+let MaxSpawnTime = 500;
+
 // let jximFreq = 3000; //частота спавена жмыхов
 
 function engine() {
@@ -643,8 +652,7 @@ function engine() {
     oldTime = time;
 
     gameSpeed = 0.001 * liveTime;
-    // console.log(time);
-    // console.log(delta);
+    //console.log("time, delta", time, delta);
 
     //Update
     ctx.clearRect(0, 0, gameW, gameH);
@@ -716,22 +724,31 @@ function engine() {
             b.draw();
         }
 
-        //Create
-        timer += delta;
-        if (timer > jimxFreq) {
-            console.log('created: ', jimxFreq);
-            rects.push(new Rect());
-            // coords print
-            // for (rct in rects){
-            //     rct.printCoords();
+        // //Create OLD
+        // timer += delta;
+        // if (timer > jimxFreq) {
+        //     console.log('created: ', jimxFreq);
+        //     rects.push(new Rect());
+        //     // coords print
+        //     // for (rct in rects){
+        //     //     rct.printCoords();
 
-            // }
-            //--
-            timer = 0;
-            if (jimxFreq > 1000){
-                jimxFreq -= Math.floor(liveTime * 0.01);
+        //     // }
+        //     //--
+        //     timer = 0;
+        //     if (jimxFreq > 1000){
+        //         jimxFreq -= Math.floor(liveTime * 0.01);
 
-            }
+        //     }
+        // }
+        //
+        //Create 
+        spawnTime++;
+        if (spawnTime > MaxSpawnTime){
+            spawnTime = 0;
+            MaxSpawnTime = 400 / gameSpeed;
+            console.log("MaxSpawnTime (500):", MaxSpawnTime)
+         rects.push(new Rect());
         }
         
         liveTime++;
