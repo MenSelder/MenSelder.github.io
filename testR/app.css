@@ -1,0 +1,16 @@
+body{
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 40px;
+    text-shadow:3px 4px 4px blue;
+}
+button{
+    width: 25vw;
+    height: 25vh;
+    margin: 2vw;
+    border-radius: 50%;
+    border: 1px solid;
+    color: #0000ff;
+    background: red;
+}

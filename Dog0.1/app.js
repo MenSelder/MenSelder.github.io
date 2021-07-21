@@ -127,6 +127,8 @@ function new_game() {
     jumpDogSpeed = 7 * jumpCoef;
     gravity = 0.1 * jumpCoef;
 
+    MaxSpawnTime = 500;
+
     isBoss = false;
 
     $('hp').innerHTML = health;
